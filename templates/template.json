@@ -1,5 +1,9 @@
 [
   {
+    "name": "Godot 4.6 微信小游戏模板",
+    "filename": "minigame4.6Latest.zip"
+  },
+  {
     "name": "4.4微信小游戏2D完整版",
     "filename": "minigame.2d.full_4.4.zip"
   },
@@ -11,7 +15,6 @@
     "name": "4.4微信小游戏3D-Jolt版",
     "filename": "minigame.3d.jolt_4.4.zip"
   },
-  
   {
     "name": "4.4微信小游戏3D老物理引擎版",
     "filename": "minigame.3d.gp.zip"

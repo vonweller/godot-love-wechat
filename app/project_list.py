@@ -4,7 +4,7 @@ from nicegui import ui, app, run
 from app.utils import parse_godot_project
 from app.stroge import Storge
 from PIL import Image
-import webview
+from webview import FileDialog
 import uuid
 import os
 
@@ -77,7 +77,7 @@ def project_list():
     project_manager.init()
 
     async def import_project():
-        file = await app.native.main_window.create_file_dialog(dialog_type=webview.FOLDER_DIALOG, allow_multiple=False, file_types=())  # type: ignore
+        file = await app.native.main_window.create_file_dialog(dialog_type=FileDialog.FOLDER, allow_multiple=False, file_types=())  # type: ignore
         if not file:
             return
         folder = file[0]

@@ -4,7 +4,7 @@ from typing import List
 from nicegui import run, ui, app
 from nicegui.elements.dialog import Dialog
 from nicegui.elements.tree import Tree
-import webview
+from webview import FileDialog
 import os
 from app import gdscripts, utils
 from app.stroge import Storge
@@ -162,7 +162,7 @@ def export_config(project):
         export_settings.from_dict(project_export_settings)
 
     async def chosse_export_path():
-        file = await app.native.main_window.create_file_dialog(dialog_type=webview.FOLDER_DIALOG, allow_multiple=False, file_types=())  # type: ignore
+        file = await app.native.main_window.create_file_dialog(dialog_type=FileDialog.FOLDER, allow_multiple=False, file_types=())  # type: ignore
         if file:
             export_settings.export_path = file[0]
 
